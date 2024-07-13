@@ -21,8 +21,7 @@ type stripeClient struct{}
 
 // NewStripeClient returns a new instance of stripeClient
 func NewStripeClient() StripeClient {
-	stripe.Key = os.Getenv("STRIPE_SECRET_KEY") // Deberías usar variables de entorno
-	//stripe.Key = "sk_test_51PNKcaKvBt26sQFRFnx5cjlSLmcFxLsJ5SQSuNX2g9theSayYsxjrb910cCuNZKRg7HCL1Wan4HYDMRylH1wdD0700eo8ywsEt"
+	stripe.Key = os.Getenv("STRIPE_SECRET_KEY")
 	return &stripeClient{}
 }
 
